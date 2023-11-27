@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from './shared/Card'
-import { FaTimes, FaEdit } from 'react-icons/fa'
+import { FaTimes } from 'react-icons/fa'
 
 function FeedbackItem({ item , handleDelete}) {
    
