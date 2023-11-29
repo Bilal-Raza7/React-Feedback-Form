@@ -44,11 +44,15 @@ function FeedbackForm() {
                 text,
                 rating,
             }
-            if(feedbackEdit.item){
+            if(feedbackEdit.item===true ){
                 updateFeedback(feedbackEdit.item.id, newFeedback)
+                setText('')
+                setRating(10)
             }
             else{
                 addFeedback(newFeedback);
+                setText('')
+                setRating(10)
             }
             
         }
@@ -62,7 +66,9 @@ function FeedbackForm() {
             <div className="input-group">
                 
                 <input onChange={HandleTextChange} type='text' placeholder='write a review' value={text}></input>
-                <Button  type='submit' isDisable={btnDisabled} />
+                <Button type='submit' isDisabled={btnDisabled}>
+            Send
+          </Button>
             </div>
             {message && <div className='message'>{message}</div>}
         </form>
